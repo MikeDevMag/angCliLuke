@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h3>
+    Angular4.. test test {{title}}!
+  </h3>
+  
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <a routerLink="/" routerLinkActive="active-link">Home</a> |
+  <a routerLink="test" routerLinkActive="active-link">test</a> |
+  <a routerLink="test2" routerLinkActive="active-link">test2</a> |
+  <a routerLink="/tabs" routerLinkActive="active-link">tabs</a>|
+  <a routerLink="/steps" routerLinkActive="active-link">steps</a>|
+  <a routerLink="/names" routerLinkActive="active-link">names</a>|
+</div>
+
+<div id="main">
+  <!--<h2>Sidenav Push Example</h2>
+  <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>-->
+  <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
+</div>
+
+
+<router-outlet></router-outlet>
+
+<div class="container-fluid">
+  <span style="text-align:center !important" class="spinner-text" *ngIf="loading">
+    <span class="glyphicon glyphicon-refresh glyphicon-spin spinner"></span>
+    <span style="text-align:center !important" class="spinner-text">Retrieving Data. Please wait...</span>
+  </span>
+</div>
